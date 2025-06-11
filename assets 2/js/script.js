@@ -58,10 +58,10 @@ function generateMemberCard(member) {
 <div class="mt-3 col-sm-12 col-md-6 col-lg-6 col-xl-4">
   <div class="card">
     <div class="row g-0">
-      <div class="col-md-4">
+      <div class="col-4">
         <img class="img-fluid h-100 object-fit-cover" src="../${img}" class="img-fluid rounded-start" alt="...">
       </div>
-      <div class="col-md-8">
+      <div class="col-8">
         <div class="card-body">
           <h5 class="card-name mb-3">${name}</h5>
           <p class="card-role mb-3">${role}</p>
