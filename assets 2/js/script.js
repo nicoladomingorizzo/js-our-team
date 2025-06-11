@@ -55,7 +55,7 @@ function generateMemberCard(member) {
   const { name, role, img, email } = member;
   // generate the member card
   const memberCard = `
-<div class="mt-3 col-sm-12 col-md-6 col-lg-4">
+<div class="mt-3 col-sm-12 col-md-6 col-lg-6 col-xl-4">
   <div class="card">
     <div class="row g-0">
       <div class="col-md-4">
@@ -63,8 +63,8 @@ function generateMemberCard(member) {
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-name">${name}</h5>
-          <p class="card-role mb-1">${role}</p>
+          <h5 class="card-name mb-3">${name}</h5>
+          <p class="card-role mb-3">${role}</p>
           <p class="card-email mb-1"><small class="text-body-secondary"><a href="#">${email}</a></small></p>
         </div>
       </div>
