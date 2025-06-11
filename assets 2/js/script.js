@@ -55,16 +55,18 @@ function generateMemberCard(member) {
   const { name, role, img, email } = member;
   // generate the member card
   const memberCard = `
-<div class="card mt-3 col-sm-12 col-md-6 col-lg-4">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img class="img-fluid" src="../${img}" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-name">${name}</h5>
-        <p class="card-role">${role}</p>
-        <p class="card-email"><small class="text-body-secondary"><a href="#">${email}</a></small></p>
+<div class="mt-3 col-sm-12 col-md-6 col-lg-4">
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="img-fluid h-100 object-fit-cover" src="../${img}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-name">${name}</h5>
+          <p class="card-role mb-1">${role}</p>
+          <p class="card-email mb-1"><small class="text-body-secondary"><a href="#">${email}</a></small></p>
+        </div>
       </div>
     </div>
   </div>
@@ -73,19 +75,19 @@ function generateMemberCard(member) {
   return memberCard
 };
 
-//function for 
+//function for print the members card inside the node u want
 function printTeamMembers(teamMembers, newNodeEl) {
+  //create the node for the function
   newNodeEl.innerHTML = '';
   // loop for in teamMembers
   for (let i = 0; i < teamMembers.length; i++) {
     const member = teamMembers[i];
     // generate the member card
     const memberCard = generateMemberCard(member);
-
+    // insert with inserAdjacentHTML the members card
     newNodeEl.insertAdjacentHTML('beforeend', memberCard);
-
   }
 
 };
-//call the function 
+//call the function for print the member cards in main
 printTeamMembers(teamMembers, mainRowEl);
