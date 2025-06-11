@@ -62,7 +62,7 @@ function generateMemberCard(member) {
         <img class="img-fluid h-100 object-fit-cover" src="../${img}" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-8">
-        <div class="card-body">
+        <div class="card-body h-100 d-flex flex-column justify-content-between">
           <h5 class="card-name mb-3">${name}</h5>
           <p class="card-role mb-3">${role}</p>
           <p class="card-email mb-1"><small class="text-body-secondary"><a href="#">${email}</a></small></p>
